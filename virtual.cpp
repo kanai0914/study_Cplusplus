@@ -3,7 +3,7 @@
 class VirtualParent
 {
 public:
-    virtual ~VirtualParent() = default;
+    virtual ~VirtualParent() = default; // virtual ~VirtualParent(){}と処理は一緒だけど、そうするとからの関数を読んだみたいな認識になってしまう。なので defaltとして、中身ないよーっていう？
     void func() { std::cout << "Parent" << std::endl; }
     virtual void v_func() { std::cout << "Parent" << std::endl; }
 };
